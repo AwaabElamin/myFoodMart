@@ -53,7 +53,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name></name>
+						<name>awaabcontainerregistry.azurecr.io/myfoodbootpipeline</name>
 					</image>
 				</configuration>
 			</plugin>
