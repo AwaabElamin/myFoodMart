@@ -44,12 +44,10 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- task: DockerCompose@0
+- task: Docker@2
   inputs:
-    containerregistrytype: 'Azure Container Registry'
-    azureSubscription: 'Azure subscription 1(1)(f85118c2-9f73-4fca-a695-edeea853f217)'
-    azureContainerRegistry: '{"loginServer":"awaabcontainerregistry.azurecr.io", "id" : "/subscriptions/f85118c2-9f73-4fca-a695-edeea853f217/resourceGroups/Awaab_Elamin_GB/providers/Microsoft.ContainerRegistry/registries/awaabContainerRegistry"}'
-    dockerComposeFile: '**/docker-compose.yml'
-    qualifyImageNames: false
-    action: 'Run a Docker Compose command'
+    containerregistry: 'awaabContainerRegistry '
+    repository: 'myfoodbootpipeline'
+    command: push
+    tags: latest
 
